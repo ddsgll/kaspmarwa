@@ -1,0 +1,137 @@
+mixin prog_normal_hadj
+	.prog_item.col-md-4.col-sm-8.col-sm-push-2.col-xs-12(data-type="hadj2015")
+		.program_normal
+			.title Минимум
+			.prog_info
+				.air
+					span Махачкала — Медина
+					span Джидда — Махачкала
+
+				.nights
+					span 3
+					span Ночи
+
+				.walk
+					span 15 мин.
+					span до мечети
+
+				.hotel
+					h3 Гостиница в мекке
+					.stars
+						span.gold
+						span.gold
+						span.gold
+						span.gray
+						span.gray
+					.sleep
+						span 3-6 человек
+
+				.price $ 3100
+			.link
+				a(href="") Подробнее
+
+
+mixin prog_normal_umra
+	.prog_item.col-md-4.col-sm-8.col-sm-push-2.col-xs-12(data-type="umra2015")
+		.program_normal
+			.title Минимум
+			.prog_info
+				.air
+					span Махачкала — Медина
+					span Джидда — Махачкала
+
+				.nights
+					span 3
+					span Ночи
+
+				.walk
+					span 15 мин.
+					span до мечети
+
+				.hotel
+					h3 Гостиница в мекке
+					.stars
+						span.gold
+						span.gold
+						span.gold
+						span.gray
+						span.gray
+					.sleep
+						span 3-6 человек
+
+				.price $ 3100
+			.link
+				a(href="") Подробнее
+
+
+mixin prog_extra
+	.prog_item.extra-item.col-md-4.col-sm-8.col-sm-push-2.col-xs-12(data-type="hadj2015")
+		.program_normal.extra
+			.title Стандарт
+			.prog_info
+				.air
+					span Махачкала — Медина
+					span Джидда — Махачкала
+
+				.nights
+					span 8
+					span Ночей
+
+				.walk
+					span 5 мин.
+					span до мечети
+
+				.hotel
+					h3 Гостиница в мекке
+					.stars
+						span.gold
+						span.gold
+						span.gold
+						span.gold
+						span.gold
+					.dinner
+						span Завтрак и ужин
+					.sleep
+						span 3-6 человек
+
+				.price $ 3100
+			.link
+				a(href="") Подробнее
+
+//------------------------------------------------------------------
+.greetings
+	.container
+		.row
+			.col-xs-12.col-sm-8.col-md-6
+				h1 Ас-саляму алейкум!
+				span.h2
+					| Дорогие братья и сестры, мы очень рады сообщить вам
+					| о начале приема документов на малый Хадж 2015
+
+				span.h3
+					| Чтобы узнать подробности и получить дополнительную 
+					| информацию, Вы можете позвонить нам по телефону
+
+				h1.number +7 8722 56-66-62
+				span.h2 или ознакомиться с доступными программами
+
+.main_programs
+	.container
+		.tabs.programs#program_tab
+			h2(data-type="hadj2015") Хадж 2015
+			h2(data-type="all") Все программы
+			h2(data-type="umra2015") Умра 2015
+
+		.prog_list
+			.arrow-left#prog_main_prev
+			.arrow-right#prog_main_next
+			.row
+				+prog_normal_hadj
+				+prog_extra
+				+prog_normal_umra
+				+prog_normal_hadj
+				+prog_normal_umra
+				//- +prog_normal_umra
+				//- +prog_normal_hadj
+				//- +prog_normal_umra
+				//- +prog_normal_hadj

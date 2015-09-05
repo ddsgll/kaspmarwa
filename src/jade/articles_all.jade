@@ -1,0 +1,55 @@
+mixin article_item
+	.col-md-4.col-sm-6.col-xs-12
+		.article_item
+			.photo
+				img(src="img/photos/article.jpg")
+				.title Название статьи
+
+			.info
+				p 
+					| Как житель Мекки, я должен сказать, что во время хаджа
+					| и в течение священного месяца Рамадан вся атмосфера здесь
+					| поразительная – все кипит, все возбуждены.
+					| Например, поездка в какой-нибудь район, на которую
+					| в обычные дни уходит минут 20, в это время может занять
+					| два часа, особенно, если то место, куда вам надо, расположено
+					| рядом с Заповедной мечетью Аль-Харам или святыней Кааба.
+
+				a(href="").link Читать далее
+
+doctype html
+html(lang='ru')
+	include blocks/general/head.jade
+	
+	body
+		include blocks/general/inner_top.jade
+
+		.inner_content
+			.container
+				.breadcumbs
+					a(href="") Главная
+					|   /  
+					a(href="") Информация
+					|   /  Статьи
+				.inner_title
+					h1 Статьи
+
+				.row
+					+article_item
+					+article_item
+					+article_item
+					+article_item
+					+article_item
+					+article_item
+					+article_item
+					+article_item
+					+article_item
+
+				include blocks/general/paginator.jade
+				
+		.page_heading-center
+			h1 Контакты
+
+		include blocks/index/main_map.jade
+		include blocks/general/footer.jade			
+		include blocks/general/scripts.jade

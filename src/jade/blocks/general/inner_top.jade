@@ -1,0 +1,47 @@
+// ==========================
+// Top line 
+// ==========================
+.main_top
+	.container
+		.item
+			img(src="img/icons/top_phone.png")
+			span +7 (8722) 56-66-62
+
+		.item
+			img(src="img/icons/top_mail.png")
+			span admin@marwaltd.com
+
+		.item.top_lang
+			span Русский
+			img(src="img/icons/lang_rus.png")
+			img(src="img/icons/dd_white.png")
+
+
+		.item.search
+			input(type="text" placeholder="Поиск")
+
+.sub_lang
+	.lang
+		span Русский
+		img(src="img/icons/lang_rus.png")
+	.lang
+		span English
+		img(src="img/icons/lang_en.png")
+	.lang
+		span.arab اللغة
+		img(src="img/icons/lang_ar.png")
+
+// ==========================
+// Menu 
+// ==========================
+.main_menu.floated.inner
+	.container
+		include ../index/main_menu.jade
+
+// ==========================
+// Mobile menu
+// ==========================
+.mobile_menu
+	.burger#mobile_menu_open
+	.container
+		include ../index/main_menu.jade

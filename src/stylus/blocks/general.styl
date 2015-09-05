@@ -1,0 +1,141 @@
+body,html
+	font-size 16px
+	min-height 100%
+	width 100%
+	
+	
+.page_heading-center,
+.tabs
+	width 100%
+	text-align center
+	margin 8px 0
+	padding 8px 0
+	overflow hidden
+	
+	h1,h2,h3
+		display inline-block
+		color main_blue
+		
+	h1		
+		&::before,
+		&::after
+			{after}
+			width 2000px
+			height 1px
+			background main_blue
+			top 50%
+			right 110%
+		
+		&::after
+			right auto
+			left 110%
+			
+	h2
+		font-size 24px
+		padding 4px
+		border-bottom 2px solid transparent
+		color main_blue
+		transition all .3s ease
+		margin 0px 16px
+		cursor pointer
+		font-weight normal
+		
+		&:hover,
+		&.active
+			color gold
+			border-bottom 2px solid gold
+		
+.tabs.programs
+	@extend .tabs
+	margin-bottom 16px
+	
+	h1,h2,h3
+		color #fff
+			
+footer
+	width 100%
+	height 72px
+	background gray
+	
+	sm =
+		height 144px
+	adapt(sm)
+	
+	span,a,.dev
+		{clean}
+		color #fff
+		display inline-block
+		vertical-align middle
+		
+	a
+		border-bottom 1px solid transparent
+		padding 2px 0
+		transition all .3s ease
+		margin 0 16px
+		
+		sm =
+			margin 0 16px 0 0
+			padding 10px 0
+		adapt(sm)
+		
+	a:hover
+		color salad
+		border-bottom 1px solid salad
+		
+	.copyright
+		height 100%
+		line-height 72px
+		border-right 1px solid rgba(255,255,255,.2)
+		padding-right 48px
+		margin-right 32px
+		
+		sm =
+			height auto
+			padding 8px 0
+			border-right none
+			border-bottom 1px solid rgba(255,255,255,.2)
+			line-height 1
+			margin-right 0
+		adapt(sm)
+		
+	.dev
+		height 72px
+		float right
+		line-height 72px
+		
+		sm = 
+			float none
+			width 100%
+		adapt(sm)
+		
+		*
+			display inline-block
+			vertical-align middle
+			margin-left 16px
+			
+			sm = 
+				margin 0px
+				margin-right 16px
+			adapt(sm)
+	
+.fillcontainer-800
+	width 100%
+	height 800px
+	
+.inner_content
+	margin-top 120px
+	min-height 400px
+
+
+.preloader
+	position fixed
+	top 0
+	left 0
+	width 100%
+	height 100%
+	background #fff
+	text-align center
+	z-index 9999
+	
+	h1
+		color main_blue

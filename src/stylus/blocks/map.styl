@@ -1,0 +1,121 @@
+map_height = 600px
+
+.map
+	width 100%
+	height map_height
+	background main_blue
+	
+.map_container
+	position absolute
+	top 0
+	left 0
+	height 100%
+	width 100%
+
+.mail_form
+	background main_blue_semitrans
+	height map_height
+	padding 24px
+	z-index 300
+
+	.title
+		{boblic}
+		color #fff
+		text-transform uppercase
+		font-size 36px
+		margin 16px 0
+		
+		sm =
+			font-size 16px
+		mid =
+			font-size 22px
+		nor =
+			font-size 28px
+		big =
+			font-size 36px
+		adapt(sm,mid,nor,big)
+		
+		&::after
+			{after}
+			left 0
+			bottom -8px
+			width 100px
+			height 1px
+			background #fff
+		
+	p 
+		{clean}
+		margin 24px 0
+		font-size 16px
+		line-height 1.5
+		color #fff
+		
+		sm =
+			font-size 14px
+			margin 16px 0
+		nor = 
+			font-size 16px
+			margin 24px 0
+		adapt(sm,sm,nor,nor)
+		
+	input,
+	textarea
+		{clean}
+		width 50%
+		display inline-block
+		background rgba(40,60,118,.35)
+		border 2px solid #fff
+		padding 14px
+		color #fff
+		margin 16px 0
+		
+		sm =
+			font-size 14px
+			margin 12px 0
+			padding 8px
+			width 100%
+			text-align left
+		nor = 
+			font-size 16px
+			margin 16px 0
+			padding 14px
+		adapt(sm,sm,nor,nor)
+		
+	input
+		&:nth-child(1)
+			width 48%
+			margin-right 2%
+			
+			sm =
+				font-size 14px
+				margin 12px 0
+				padding 8px
+				width 100%
+				text-align left
+			nor = 
+				font-size 16px
+				margin 16px 0
+				margin-right 2%
+				padding 14px
+			adapt(sm,sm,nor,nor)
+		
+	textarea
+		width 100%
+		height 180px
+		
+		sm =
+			height 120px
+		nor = 
+			height 180px
+		adapt(sm,sm,nor,nor)
+		
+	input[type="button"]
+		{boblic}
+		display block
+		width 100%
+		background #fff
+		color main_blue
+		text-align center
+		text-transform uppercase
+		cursor pointer
+		

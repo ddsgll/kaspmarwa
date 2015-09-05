@@ -1,0 +1,125 @@
+/*
+===========================
+CROSSBROWSER
+===========================
+*/
+
+transform()
+    -webkit-transform arguments
+    transform arguments
+
+
+
+t_origin()
+    -webkit-transform-origin arguments
+    transform-origin arguments
+
+
+
+border-radius()
+    -moz-border-radius arguments
+    border-radius arguments
+
+
+
+transition()
+    -webkit-transition arguments
+    transition arguments
+       
+
+
+animation()
+    -webkit-animation arguments
+    -moz-animation arguments
+    animation arguments
+
+
+
+filter()
+    -webkit-filter arguments
+    filter arguments
+
+
+
+noselect() 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+
+
+gradient(r, c1, c2)
+    background: -webkit-linear-gradient(r, c1, c2);
+    background: linear-gradient(r, c1, c2);
+
+
+
+/*
+===========================
+STYLING
+===========================
+*/
+
+reset-inline()
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -1;
+
+
+
+restore-inline()
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: normal;
+
+
+
+
+
+/*
+===========================
+FLEXBOX
+===========================
+*/
+
+flex-centrify()
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+
+    
+/*
+===========================
+ADAPT
+===========================
+*/
+min = 768px
+mid = 992px
+nor = 1300px
+big = 1500px
+
+adapt(min_st = '', mid_st = '', nor_st = '', big_st = '')
+    @media screen and (max-width: min)
+        {min_st}
+    
+    @media screen and (max-width: mid)
+        {mid_st}
+    
+    @media screen and (min-width: nor)
+        {nor_st}
+    
+    @media screen and (min-width: big)
+        {big_st}
+        
+
+hide_on_small()
+    sm = 
+        display none
+    mid = 
+        display none
+        apadt(sm,mid)

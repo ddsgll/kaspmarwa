@@ -1,0 +1,112 @@
+.mobile_menu
+	position fixed	
+	width 20%
+	z-index 999999999999999
+	display none
+	
+	@media screen and (max-width 1300px)
+		display block
+	
+	.burger
+		display inline-block
+		position fixed
+		top 8px
+		left 8px	
+		width 48px
+		height 48px	
+		background #fff url('../img/icons/burger.png') no-repeat center
+		z-index 300
+		border 2px solid lighten(main_blue,30%);
+		border-radius 50%
+		box-shadow 0px 5px 12px rgba(0,0,0,.2);
+		cursor pointer
+
+		sm =
+			display block
+		nor =
+			display none
+		adapt(sm,sm,nor,nor)
+		
+	ul.menuList
+		reset-inline()
+		position fixed
+		top 0
+		left -100%
+		width 100%
+		height 100%	
+		background #fff
+		text-align center
+		z-index 400
+		list-style none
+		
+		for i in (1..10)
+			&:nth-child({i})
+				transition all .4s i/5s ease
+		
+		
+		.mobile-close
+			position absolute	
+			top 8px
+			left 8px
+			width 48px
+			height 48px	
+			background url('../img/icons/menu_close.png') no-repeat center
+			z-index 500
+			transition all .3s ease
+			cursor pointer
+			
+			&:hover
+				transform rotate(90deg)
+			
+			sm =
+				display block
+			nor =
+				display none
+			adapt(sm,sm,nor,nor)
+		
+		li.image,
+		li.image_float,
+		li.helper
+			display none
+			
+		li
+			restore-inline()
+			{boblic}
+			display inline-block
+			width 90%
+			// width 50%
+			margin 10px auto
+			cursor pointer	
+			font-size 20px
+			text-transform uppercase
+			color main_blue
+			padding 16px 0
+			border-bottom 1px solid #ccc
+			background #fff
+			transition all .3s ease
+			opacity 0
+			top -16px
+			
+			transition all .3s .4s ease
+			
+			&:last-child
+				border-bottom none
+				
+			&:hover
+				background #eee
+				
+			// &:nth-child(2n+1)
+			// 	border-left 1px solid #ccc
+				
+			.submenu
+				display none
+				
+			a 
+				color main_blue
+
+		&.opened
+			left 0
+			
+			li 
+				opacity 1
+				top 0

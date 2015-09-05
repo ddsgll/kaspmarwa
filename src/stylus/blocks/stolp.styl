@@ -1,0 +1,148 @@
+size = 68px
+
+.stolp_image
+	position absolute
+	top 0
+	right 0
+	width 100%
+	height 100%
+	text-align right
+	
+	img 
+		height 100%
+
+.stolp
+	width 100%
+	// height 640px
+	background #f0f6f5
+	margin 64px 0
+	padding 0px
+	padding-bottom 64px
+	
+	sm =
+		display none
+	nor = 
+		display block
+	adapt(sm,sm,nor,nor)
+	
+	.row
+		margin 0 0 32px 0
+		
+		&.active
+			
+			.number
+				line-height size - 6px
+				border 4px solid salad
+				color salad
+				
+			h1
+				color salad
+				
+				&:after
+					background salad
+					width 280px
+				
+			p 
+				opacity 1
+				left 0
+			
+	.title
+		{boblic}
+		color main_blue
+		font-size 48px
+		padding 48px 0
+		text-transform uppercase
+		
+	.line-item
+		display inline-block
+		vertical-align middle
+		
+	.number
+		display inline-block
+		height size
+		width size
+		cursor pointer
+		
+		line-height size
+		text-align center
+		
+		border-radius 50%
+		border 1px solid main_blue
+		
+		{boblic}
+		font-size 36px
+		color main_blue
+		
+		transition all .1s ease
+			
+	h1 
+		font-size 36px
+		color main_blue
+		transition all .3s ease
+		cursor pointer
+		
+		
+		&::after
+			{after}
+			bottom -2px
+			left 0
+			width 0px
+			height 2px
+			background transparent
+			transition all .3s ease
+		
+	p
+		position absolute
+		top 32px
+		left -48px
+		font-family 'arial'
+		font-size 18px
+		line-height 1.5
+		color main_blue
+		opacity 0
+		transition all .3s ease
+		
+		sm =
+			display block
+			opacity 1
+			top 0
+			left 0
+		nor =
+			opacity 0
+		adapt(sm,sm,nor,nor);
+		
+	.row:last-child
+		
+		p 
+			top auto
+			bottom 100%
+			
+.stolp--mobile
+	background #f0f6f5
+	padding 32px 0
+	margin 24px 0
+	
+	sm =
+		display block
+	nor = 
+		display none
+	adapt(sm,sm,nor,nor)
+	
+	.title
+		{boblic}
+		text-transform uppercase
+		color main_blue
+		font-size 32px
+		margin 16px 0
+		
+	.st_mob_item
+		font-size 16px
+		color main_blue
+		line-height 1.5
+		font-family 'arial'
+		margin-bottom 20px
+		
+		h2
+			display inline-block
+			border-bottom 1px solid main_blue
+			

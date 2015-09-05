@@ -1,0 +1,32 @@
+mixin otz
+	.col-md-4.col-sm-6.col-xs-12
+		.item
+			.photo
+				img(src="img/photos/man.jpg")
+			.title
+				h2 Магомед Магомедов
+				h3 Каспийск
+			.text
+				p 
+					|Совершил хадж, по милости Аллаха,
+					|незабываемые ощущения от этого великого поклонения,
+					|вспоминания только благие и светлые,
+					|сердце смягчается при воспоминании этой поездки.
+
+// ==========================
+// Otz section
+// ==========================
+.page_heading-center
+	h1 Отзывы клиентов
+
+.otz
+	.container
+		.row
+			+otz
+			+otz
+			+otz
+			+otz
+			+otz
+			+otz
+
+			a.all_otz.col-xs-12.col-sm-8.col-sm-push-2.col-md-2.col-md-push-5(href="") все отзывы

@@ -1,0 +1,162 @@
+.news
+	margin 0
+
+	img 
+		max-width 100%
+		width auto
+
+	.news_item
+		margin 16px 16px 16px 0
+		padding 0
+		box-shadow 0px 5px 12px rgba(0,0,0,.05)
+		
+		@media screen and (max-width 480px)
+			margin 16px 0
+		
+		
+		.photo
+			width 100%
+			height 170px
+			// background red
+			overflow hidden
+			
+			> img
+				// min-width 100%
+				min-height 100%
+				
+			.date
+				position absolute
+				bottom 8px
+				left 8px
+				font-family 'arial'
+				color salad
+				font-size 14px
+				z-index 150
+				gradient(to top, #f00, #00f)
+				
+			.views
+				position absolute
+				bottom 8px
+				right 8px
+				font-family 'arial'
+				color salad
+				z-index 150
+				
+				span
+					font-size 14px
+					margin-right 8px
+				
+			&::before
+				{after}
+				top 0
+				left 0
+				height 100%
+				width 100%
+				z-index 100
+				opacity .6
+				gradient(to top, #000, transparent)
+
+		.info
+			border 1px solid #eee
+			border-top none
+			padding 0
+			
+			.title
+				{boblic}
+				display block
+				color main_blue
+				text-transform uppercase
+				font-size 18px
+				margin 8px
+				
+			p 
+				margin 8px
+				font-family 'arial'
+				font-size 14px
+				line-height 1.5
+				color #808080
+				
+			.button
+				{boblic}
+				display block
+				width 100%
+				height 40px
+				line-height 40px
+				background #f1f1f1
+				text-align center
+				text-transform uppercase
+				color main_blue
+				font-size 16px
+				transition all .3s ease
+				cursor pointer
+				
+				&:hover
+					background main_blue
+					color #fff
+					
+.newsblockExtra
+	@extend .news .news_item
+	reset-inline()
+	
+	.photo,
+	.info
+		display inline-block
+		vertical-align top
+		width 50%
+		height 360px
+		overflow hidden
+			
+		@media screen and (max-width: 992px)
+			width 100%
+			height auto
+					
+	.photo
+		overflow hidden
+		
+		> img
+			min-width 100%
+			max-height 100%
+			
+			@media screen and (max-width: 992px)
+				width 100%
+				height auto
+			
+	.info
+		sm =
+			border 1px solid #eee
+			border-top none
+		nor =
+			border 1px solid #eee
+			border-left none
+		adapt(sm,sm,nor,nor)
+		
+		.title
+			font-size 24px
+		
+		p 
+			border-top 1px solid #ddd
+			margin-top 16px
+			padding-top 16px
+			
+		.button
+			width 95%
+			margin 16px auto
+			background #fff
+			border 2px solid main_blue
+			color main_blue
+			transition all .3s ease
+			
+			sm =
+				position relative
+				bottom auto
+				left auto
+			
+			nor =
+				position absolute
+				bottom 0
+				left 2.5%
+			adapt(sm,sm,nor,nor)
+			
+			&:hover
+				background main_blue
+				color #fff

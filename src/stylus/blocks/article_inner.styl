@@ -1,0 +1,250 @@
+.article_item
+	reset-inline()
+	margin 24px 16px
+	padding 0
+	box-shadow 0px 5px 12px rgba(0,0,0,.12)
+	
+	sm =
+		margin 8px
+	adapt(min)
+	
+	.photo
+		width 100%	
+		height 240px
+		overflow hidden
+		
+		&::after
+			{after}
+			top 0
+			left 0
+			width 100%
+			height 100%	
+			gradient(to top, rgba(0,0,0,.8), transparent)	
+		
+		img
+			height 100%	
+			
+		.title
+			restore-inline()
+			position absolute	
+			width 95%	
+			left 5%
+			bottom 5%
+			z-index 300
+			font-size 16px
+			font-family 'arial'
+			color #fff
+			
+
+	.info
+		border 1px solid #eee
+		border-top none
+		
+		p
+			restore-inline()
+			text-align justify
+			font-family 'arial'
+			font-size 14px
+			line-height 1.5
+			margin 5%
+			margin-top 0%
+			padding-top 5%
+			
+		.link
+			restore-inline()
+			{boblic}
+			display block
+			text-transform uppercase
+			font-size 16px
+			color main_blue
+			width 100%
+			height 48px
+			line-height 48px
+			background #f1f1f1
+			transition all .3s ease
+			text-align center
+			
+			&:hover
+				background main_blue
+				color #fff
+				
+.article 
+	margin 32px 0
+	display inline-block
+	padding-right 24px
+	vertical-align top
+	
+	font-family 'arial'
+	font-size 16px
+	color #222
+	
+	.divider
+		width 100%
+		height 1px
+		background #ddd
+		margin 16px 0
+		
+	.date
+		color salad
+		fon-weight bold
+		font-size 14px
+		
+	.share
+		margin 8px 0
+		span
+			display block
+	
+	p 
+		font-size 14px
+		line-height 1.5
+		font-family 'arial'
+		text-align justify
+		color #222
+		
+	ul
+		list-style-position inside
+		list-style-type square
+		list-style-image url('../img/icons/list_dot.png')
+		
+		li
+			font-size 16px
+			font-family 'arial'
+			line-height 1.5
+			
+	input[type="checkbox"]
+		display none
+		
+		& + label
+			display inline-block
+			width 16px
+			height 16px
+			top 2px
+			border 2px solid main_blue
+			cursor pointer
+			transition all .3s ease
+			margin-right 12px
+			background #fff url('../img/icons/check.png') no-repeat center
+			
+		&:checked + label
+			background main_blue url('../img/icons/check.png') no-repeat center
+					
+	input[type="radio"]
+		display none
+		
+		& + label
+			display inline-block
+			width 16px
+			height 16px
+			top 2px
+			border 2px solid main_blue
+			cursor pointer
+			transition all .3s ease
+			margin-right 12px
+			border-radius 50%
+			background #fff
+			
+			&::after
+				{after}
+				top 2px
+				left 2px
+				width 8px
+				height 8px
+				border-radius 50%
+				background #fff
+				transitiosn all .3s ease
+						
+		&:checked + label::after
+			background main_blue
+		
+	table
+		width 100%
+		border 1px solid #ddd
+		border-collapse collapse
+		margin 16px 0
+		
+		tr
+			border-bottom 1px solid #ddd
+			
+			&:nth-child(2n)
+				background #f8f9fb
+			
+			&:first-child
+				background #e9ecf1
+				border-bottom 2px solid main_blue
+				
+				td
+					font-weight bold 
+					font-size 16px
+					color main_blue
+
+			td
+				border 1px solid #ddd
+				padding 16px
+				font-size 14px
+				color #808080
+				font-family 'arial'
+				
+	.check
+		margin 4px 0
+		
+.article_extra
+	margin 32px 0
+	display inline-block
+	vertical-align top
+	border-left 1px solid #aaa
+	padding-left 24px
+	
+	sm =
+		border none
+		padding 0
+	adapt(sm)
+	
+	a 
+		font-family 'arial'
+		font-size 14px
+		color main_blue
+	
+	h2
+		{boblic}
+		text-transform uppercase
+		font-size 24px
+		
+		a 
+			{boblic}
+			font-size 24px
+			color main_blue
+			font-weight normal
+	
+	.next
+		padding-bottom 16px
+		margin-bottom 16px
+		border-bottom 1px solid #ccc
+		
+		img
+			width 100%
+			margin 16px 0
+			
+		
+			
+	.button
+		{boblic}
+		display block
+		width 100%
+		border 2px solid main_blue
+		padding 8px
+		margin 16px 0
+		font-size 18px
+		text-transform uppercase
+		color main_blue
+		text-align center
+		transition all .3s ease
+		
+		&:hover
+			color #fff
+			background main_blue
+		
+	.links
+		a
+			display inline-block
+			margin 8px 0
+			line-height 1.5

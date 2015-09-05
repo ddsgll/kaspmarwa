@@ -1,0 +1,13 @@
+{
+  "name": "Dead Seagull",
+  "version": "0.0.0",
+  "authors": [
+    "Diode-Bot | <diode-bot@bk.ru>"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "flickity": "~1.0.0"
+  },
+  "description": "Frontend",
+  "license": "MIT"
+}

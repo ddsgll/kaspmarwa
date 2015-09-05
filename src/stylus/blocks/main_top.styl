@@ -1,0 +1,135 @@
+.main_top
+	height = 48px
+	
+	{clean}
+	width 100%
+	height height
+	color #fff
+	line-height height
+	z-index 100
+	background top_light_blue url('../img/top_bg.png') no-repeat center top
+	position fixed
+	top 0
+	left 0
+	z-index 5000
+	transition all .3s ease
+	overflow hidden
+	
+	sm =
+		padding-left 64px
+	
+	mid =
+		height 64px
+		font-size 18px
+		background-size auto 100%
+	adapt(sm,mid)
+
+	.item	
+		display inline-block
+		vertical-align middle
+		height 100%
+		padding 0 24px
+		border-left 1px solid rgba(255,255,255,.15)
+		
+		mid =
+			height 50%
+			border none
+			padding 0
+			padding-right 16px
+		adapt(mid,mid)
+		
+		&:nth-child(2)
+			@media screen and (max-width 480px)
+				display none
+		
+	.search
+		float right
+		width 250px
+		border none
+		
+		mid =
+			float none
+			width 100%
+		adapt(mid,mid)
+		
+		input
+			display inline-block
+			width 100%
+			color #fff
+			border none
+			background transparent url('../img/icons/top_search.png') no-repeat right center
+			padding 6px 0
+			padding-right 32px
+			border-bottom 1px solid rgba(255,255,255,.4)
+			
+	.top_lang
+		float right
+		cursor pointer
+		z-index 500
+		
+		@media screen and (max-width 640px)
+			display none
+		
+		img
+			margin-left 10px
+			
+			
+	
+	img,span
+		display inline-block
+		vertical-align middle	
+		
+	&.hidden
+		height 0
+		padding 0
+
+.sub_lang
+	position fixed
+	display block
+	top 64px
+	right 5%
+	padding 0
+	overflow hidden
+	width 260px
+	height 0px
+	
+	background main_blue_semitrans
+	border-left 2px solid gold
+	transition all .3s ease
+	transform translateY(-24px)
+	
+	opacity 0
+	z-index 8000
+
+	.lang 
+		background transparent
+		transition all .2s ease
+		padding 4px 48px 4px 64px
+		cursor pointer
+		height 33%
+		
+		&:hover
+			background rgba(255,255,255,.1)
+			
+
+		img,span
+			display inline-block
+			vertical-align middle
+			
+		span
+			{clean}
+			display inline-block
+			font-size 16px
+			color #fff
+			height 100%
+			line-height 52px
+	
+		img
+			top 12px
+			float right
+			margin-left 16px
+		
+	&.active
+		transform translateY(0px)
+		height 170px
+		opacity 1

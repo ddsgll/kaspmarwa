@@ -1,0 +1,30 @@
+mixin newsblock
+	.col-md-3.col-sm-6.col-xs-12
+		.main_n_item.news_item
+			.photo
+				img(src="img/photos/news.jpg")
+				.date 01.02.2015
+				.views
+					span 1125
+					img(src="img/icons/article_views.png")
+
+			.info
+				a(href="").title В Махачкалу прибыли Дагестанские паломники
+				p
+					| Прямым рейсом из пресветлой Медины, в Махачкалу прибыли дагестанские паломники.
+					| 19 человек благополучно добрались до Родины, совершив одно из высокопочтимых богоугодных дел... 
+				a(href="").button читать далее
+
+// ==========================
+// News section
+// ==========================
+.page_heading-center
+	h1 Новости
+
+.news
+	.container
+		.row
+			+newsblock
+			+newsblock
+			+newsblock
+			+newsblock

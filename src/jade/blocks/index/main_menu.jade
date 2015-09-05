@@ -1,0 +1,36 @@
+mixin submenu
+	// Sub-menu
+	.submenu
+			a(href="") Программа "Минимум"
+			a(href="") Программа "Эконом"
+			a(href="") Программа "Стандарт"
+			a(href="") Программа "Стандарт +"
+			a(href="") Заказ авиабилетов
+			a(href="") Необходимые документы
+			a(href="") Святые места
+			a(href="") Отзывы паломников
+
+ul.menuList
+	.mobile-close#mobile_menu_close
+	li
+		a(href="") Хадж 2015
+		+submenu
+	li
+		a(href="") Умра 2015
+		+submenu
+	li
+		a(href="") Авиабилеты
+	li.image
+		a(href="")
+			img(src="img/logo.png")
+	li.image_float
+		a(href="")
+			img(src="img/logo_small.png")
+	li
+		a(href="") Новости
+	li
+		a(href="") Информация
+		+submenu
+	li
+		a(href="") О нас
+	li.helper

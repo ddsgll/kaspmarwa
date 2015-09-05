@@ -1,0 +1,423 @@
+/* Приветствие */
+.greetings
+	width 100%
+	text-align center
+	padding 24px 0
+	
+	h1
+		{clean}
+		text-transform none
+		font-weight normal
+		font-size 36px
+		color main_blue
+				
+		&.number
+			text-transform uppercase
+			font-weight bold
+			margin 16px 0
+
+	.h2
+		{clean}
+		font-size 24px
+		display block
+	
+	.h3
+		{clean}
+		font-size 18px
+		display block
+		
+/* Программы */
+.main_programs
+	width 100%
+	// height 640px
+	background url('../img/programs.jpg') no-repeat center
+	background-size 100%
+	background-size cover
+	padding 16px 0 96px 0
+	
+	.arrow-left,
+	.arrow-right
+		position absolute
+		left -80px
+		top 50%
+		margin-top -32px
+		width 0
+		height 0
+		cursor pointer
+		
+	.arrow-left
+		border-left 32px solid transparent
+		border-top 32px solid transparent
+		border-bottom 32px solid transparent
+		border-right 32px solid #fff
+		
+		sm = 
+			display none
+		adapt(sm,sm)
+		
+		&:hover
+			border-right 32px solid gold
+			
+	.arrow-right
+		left auto
+		right -80px
+		border-left 32px solid #fff
+		border-top 32px solid transparent
+		border-bottom 32px solid transparent
+		border-right 32px solid transparent
+		
+		sm = 
+			display none
+		adapt(sm,sm)
+		
+		&:hover
+			border-left 32px solid gold
+			
+.prog_list
+	margin 0
+	
+	.row > div
+		text-align center
+		
+.prog_item
+	opacity 1
+	transition transform .4s cubic-bezier(.9,.1,.1,.9), opacity .8s ease
+	
+	&.hidden
+		opacity .3
+		position absolute
+		transform(scale(.8,.8))
+	
+.program_normal
+	text-align center
+	width 90%
+	margin 0 auto
+	top 60px
+	
+	sm = 
+		top 20px
+	adapt(sm)
+	
+	.title
+		background-color #fff
+		background-color rgba(255,255,255,.12);
+		text-align center
+		padding 12px 
+		{boblic}
+		font-size 30px
+		text-transform uppercase
+		color salad
+		
+		sm = 
+			font-size 22px
+		adapt(sm)
+		
+	.prog_info
+		background #fff
+		reset-inline()
+		
+		sm = 
+			padding 6px 0px
+		adapt(sm)
+		
+		*
+			restore-inline()
+		
+		.air
+			width 90%
+			background url('../img/icons/program/plane.png') no-repeat left center
+			padding 32px 0
+			margin 0 auto
+			padding-left 96px
+			
+			sm =
+				background-size 48px auto
+				padding 16px 0
+				padding-left 64px
+			adapt(sm)
+			
+			span 
+				{clean}
+				text-transform uppercase
+				display block
+				font-size 20px
+				margin 4px 0
+				
+				sm =
+					font-size 14px
+				adapt(sm)
+			
+		.nights
+			display inline-block
+			width 45%
+			vertical-align top
+			background url('../img/icons/program/hotel.png') no-repeat left center
+			text-align left
+			padding 20px 0
+			padding-left 80px
+			
+			sm =
+				padding 0px
+				background-size 32px auto
+				padding-left 40px
+			adapt(sm)
+			
+			span
+				display block
+				{clean}
+				font-size 16px
+				text-transform uppercase
+				
+				sm =
+					font-size 12px
+				adapt(sm)
+				
+				&:first-child
+					{boblic}
+					font-size 24px
+					color salad
+					font-weight bold
+					text-transform none
+					margin-bottom 6px
+					
+					sm = 
+						font-size 18px
+					adapt(sm)
+			
+		.walk
+			display inline-block
+			width 45%
+			vertical-align top
+			background url('../img/icons/program/man-walk.png') no-repeat 24px center
+			text-align left
+			padding 20px 0
+			padding-left 80px
+			
+			sm =
+				padding 0px
+				background url('../img/icons/program/man-walk.png') no-repeat left bottom
+				background-size 32px auto
+				padding-left 40px
+			adapt(sm)
+			
+			span
+				display block
+				{clean}
+				font-size 16px
+				text-transform uppercase
+				
+				sm =
+					font-size 12px
+				adapt(sm)
+				
+				&:first-child
+					{boblic}
+					font-size 24px
+					color salad
+					font-weight bold
+					text-transform none
+					margin-bottom 6px
+					
+					sm = 
+						font-size 18px
+					adapt(sm)
+			
+		.hotel
+			width 90%
+			padding 16px 0
+			margin 0px auto
+			border-top 1px solid #ccc
+			
+			sm = 
+				margin 8px auto
+				padding 8px 0
+			adapt(sm)
+			
+			h3
+				color salad
+				text-transform none
+				font-size 21px
+			
+			.stars
+				margin 12px auto
+				reset-inline()
+				
+				.gold
+					display inline-block
+					width 24px
+					height 24px
+					margin 0px 4px
+					background url('../img/icons/program/star.png') no-repeat center
+					
+				.gray
+					display inline-block
+					width 24px
+					height 24px
+					margin 0px 4px
+					background url('../img/icons/program/gray_star.png') no-repeat center
+					
+			.sleep,
+			.dinner
+				{clean}
+				display inline-block
+				width 48%
+				background url('../img/icons/program/bed.png') no-repeat left center
+				font-size 16px
+				text-transform uppercase
+				padding 8px 0
+				padding-left 48px
+				margin 16px 0
+				min-height 35px
+				
+				sm =
+					font-size 14px
+					padding 0px
+					padding-left 48px
+				adapt(sm)
+				
+			.dinner
+				padding-left 48px
+				background url('../img/icons/program/serve.png') no-repeat left center
+				
+
+		.price
+			{boblic}
+			width 90%
+			margin 0 auto
+			padding 10px 0
+			font-size 36px
+			color salad
+			text-transform uppercase
+			text-align center
+			
+			sm =
+				font-size 28px
+				padding 0
+			adapt(sm)
+			
+			&::before,
+			&::after
+				{after}
+				top 50%
+				left 0
+				width 25%
+				height 1px
+				background salad
+				
+			&::after
+				left auto
+				right 0
+
+		
+	.link
+		background #39AD9E
+		reset-inline()
+		
+		&::after
+			{after}
+			left 0
+			bottom -45px
+			width 100%
+			height 45px
+			background url('../img/icons/prog_bottom.png') no-repeat top center
+			background-size 100%
+
+		a 
+			restore-inline()
+			display inline-block
+			top 16px
+			color #fff
+			text-transform uppercase
+			{clean}
+			font-size 24px
+			z-index 100
+			transition all .3s ease
+			
+			sm = 
+				top 12px
+				font-size 18px
+			adapt(sm)
+			
+			&:hover
+				top 10px
+				
+
+	&.extra
+		width 100%
+		top 0
+		
+		sm =
+			width 95%
+		adapt(sm)
+		
+		.title
+			color gold
+			font-size 36px
+			
+			sm =
+				font-size 22px
+			adapt(sm)
+			
+		.prog_info
+			padding 32px 0
+			
+			sm =
+				padding 6px 0
+			adapt(sm)
+			
+			.price
+				font-size 45px
+				color gold
+				
+				sm =
+					font-size 28px
+				adapt(sm)
+			
+		.link
+			background gold
+			
+			sm = 
+				font-size 18px
+			adapt(sm)
+			
+			&::after
+				bottom -64px
+				width 100%
+				height 64px
+				background url('../img/icons/prog_bottom_gold.png') no-repeat top center
+				background-size 100%
+				
+.program_normal--inner
+	@extend .program_normal
+	
+	width 95%
+	margin-right 5%
+	margin-bottom 32px
+	border 1px solid #eee
+	box-shadow 0px 5px 12px rgba(0,0,0,.15)
+	
+	.title
+		color main_blue
+		border-bottom 1px solid #eee
+		
+	.price 
+		color main_blue
+	
+	.link
+		padding 16px 0
+		background main_blue
+		transition all .3s ease
+		
+		&:hover
+			background #fff
+			color main_blue
+			
+			a 
+				color main_blue
+
+		a, a:hover
+			top 0
+		
+	.link::after
+		display none
+		

@@ -1,0 +1,60 @@
+/*
+=====================================================================================================================
+Typograph
+=====================================================================================================================
+*/
+@font-face {
+    font-family: 'Boblic';
+    src: url('f/boblic.eot');
+    src: url('f/boblic.eot?#iefix') format('embedded-opentype'),
+         url('f/boblic.woff') format('woff'),
+         url('f/boblic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cleanvel';
+    src: url('f/cleanvel.eot');
+    src: url('f/cleanvel.eot?#iefix') format('embedded-opentype'),
+         url('f/cleanvel.woff') format('woff'),
+         url('f/cleanvel.ttf') format('truetype');
+}
+
+boblic =
+	font-family 'Boblic'
+	font-size 16px
+	
+clean =
+	font-family 'cleanvel'
+	font-size 16px
+	
+.arab
+	font-family 'arial'
+	
+h1,h2,h3
+	{boblic}
+	text-transform uppercase
+	font-weight bold
+
+h1
+	font-size 36px
+	
+	sm =
+		font-size 22px
+	adapt(sm,sm)
+	
+h2
+	font-size 24px
+	
+	sm =
+		font-size 18px
+	adapt(sm,sm)
+	
+h3
+	font-size 18px
+	font-weight normal
+	
+	sm =
+		font-size 16px
+	adapt(sm,sm)

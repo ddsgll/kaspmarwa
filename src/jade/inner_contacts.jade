@@ -1,0 +1,73 @@
+mixin person
+	// Person item =============
+	// =========================
+	.col-md-6.col-sm-12.col-xs-12
+		.cont_person
+			.photo
+				img(src="img/photos/person.png")
+			.info 
+				.title Хабибов Ахмад Асадулаевич
+				.whois Генеральный директор ООО "Марва-Тур"
+				.conts 
+					span +7 988 123-45-67
+					span ahmadd04@gmail.com
+
+doctype html
+html(lang='ru')
+	include blocks/general/head.jade
+	
+	body
+		include blocks/general/inner_top.jade
+
+		.inner_content
+			.container
+				.page_heading-center
+					h1 Контакты
+
+			.contacts
+				.container
+					.row
+
+						+person
+						+person
+						+person
+						+person
+
+						// Contact block ===========
+						// =========================
+						.col-md-2.col-sm-1.col-xs-4
+							.cont_icon
+								img(src="img/icons/adres.png")
+
+						.col-md-4.col-sm-5.col-xs-8
+							.cont_info
+								h1       	Офис в махачкале
+								.address 	ул. Азиза Алиева, дом 24 367000
+								.cont 
+									h2   	Тел.
+									span 	+7 (8722) 56-66-62
+									span 	+7 988 207-00-09
+								.cont
+									h2   	E-Mail
+									span 	admin@marwaltd.com
+
+						// Contact block ===========
+						// =========================
+						.col-md-2.col-sm-1.col-xs-4
+							.cont_icon
+								img(src="img/icons/adres.png")
+
+						.col-md-4.col-sm-5.col-xs-8
+							.cont_info
+								h1       	Офис в москве
+								.address 	Смоленский бульв., 22/14 119002
+								.cont 
+									h2   	Тел.
+									span 	+7 (499) 248-23-75
+								.cont
+									h2   	E-Mail
+									span 	admin@marwaltd.com
+
+		include blocks/index/main_map.jade
+		include blocks/general/footer.jade			
+		include blocks/general/scripts.jade

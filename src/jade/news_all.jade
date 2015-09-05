@@ -1,0 +1,76 @@
+mixin newsblock
+	.col-md-3.col-sm-6.col-xs-12
+		.main_n_item.news_item
+			.photo
+				img(src="img/photos/news.jpg")
+				.date 01.02.2015
+				.views
+					span 1125
+					img(src="img/icons/article_views.png")
+
+			.info
+				a(href="").title В Махачкалу прибыли Дагестанские паломники
+				p
+					| Прямым рейсом из пресветлой Медины, в Махачкалу прибыли дагестанские паломники.
+					| 19 человек благополучно добрались до Родины, совершив одно из высокопочтимых богоугодных дел... 
+				a(href="").button читать далее
+
+mixin newsblockExtra
+	.newsblockExtra
+		.photo
+			img(src="img/photos/news.jpg")
+			.date 01.02.2015
+			.views
+				span 1125
+				img(src="img/icons/article_views.png")
+
+		.info
+			a(href="").title В Махачкалу прибыли Дагестанские паломники. Проверка многострочности
+			p
+				| Прямым рейсом из пресветлой Медины, в Махачкалу прибыли дагестанские паломники.
+				| 19 человек благополучно добрались до Родины, совершив одно из высокопочтимых богоугодных дел.
+				| Прямым рейсом из пресветлой Медины, в Махачкалу прибыли дагестанские паломники.
+				| 19 человек благополучно добрались до Родины, совершив одно из высокопочтимых богоугодных дел. 
+			a(href="").button читать далее
+
+
+
+doctype html
+html(lang='ru')
+	include blocks/general/head.jade
+	
+	body
+		include blocks/general/inner_top.jade
+
+		.inner_content
+			.container
+
+				.page_heading-center
+					h1 Новости
+
+				.news
+					.container
+						.row
+							+newsblockExtra
+							+newsblock
+							+newsblock
+							+newsblock
+							+newsblock
+							+newsblock
+							+newsblock
+							+newsblock
+							+newsblock
+							+newsblock
+							+newsblock
+							+newsblock
+							+newsblock
+
+
+				include blocks/general/paginator.jade
+				
+		.page_heading-center
+			h1 Контакты
+
+		include blocks/index/main_map.jade
+		include blocks/general/footer.jade			
+		include blocks/general/scripts.jade

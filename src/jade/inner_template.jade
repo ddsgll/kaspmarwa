@@ -1,0 +1,26 @@
+doctype html
+html(lang='ru')
+	include blocks/general/head.jade
+	
+	body
+		include blocks/general/inner_top.jade
+
+		.inner_content
+			.container
+				.breadcumbs
+					a(href="") Главная
+					|   /  
+					a(href="") Информация
+					|   /  Название страницы
+
+				.inner_title
+					h1 Заголовок страницы
+
+				include blocks/general/paginator.jade
+				
+		.page_heading-center
+			h1 Контакты
+
+		include blocks/index/main_map.jade
+		include blocks/general/footer.jade			
+		include blocks/general/scripts.jade

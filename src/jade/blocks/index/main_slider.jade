@@ -1,0 +1,80 @@
+//- sliders mixins
+mixin slide-1
+	.item.slide-1
+		.desc.flex-center
+			.title Прием документов<br> на малый хадж
+			.date — 2015 —
+			.button Записаться
+
+mixin slide-2
+	.item.slide-2
+		.desc.flex-center
+			.title Прием документов на умра
+			.date — 2015 —
+			.button Записаться
+
+
+// ==========================
+// First section 
+// ==========================
+section.slider_block
+
+	// ==========================
+	// Top line 
+	// ==========================
+
+	.sub_lang
+		.lang
+			span Русский
+			img(src="img/icons/lang_rus.png")
+		.lang
+			span English
+			img(src="img/icons/lang_en.png")
+		.lang
+			span.arab اللغة
+			img(src="img/icons/lang_ar.png")
+
+	.main_top
+		.container
+			.item
+				img(src="img/icons/top_phone.png")
+				span +7 (8722) 56-66-62
+
+			.item
+				img(src="img/icons/top_mail.png")
+				span admin@marwaltd.com
+
+			.item.top_lang
+				span Русский
+				img.flag(src="img/icons/lang_rus.png")
+				img(src="img/icons/dd_white.png")
+
+			.item.search
+				input(type="text" placeholder="Поиск")
+
+	// ==========================
+	// Menu 
+	// ==========================
+	.main_menu.main_page
+		.container
+			include main_menu.jade
+
+	// ==========================
+	// Mobile menu
+	// ==========================
+	.mobile_menu
+		.burger#mobile_menu_open
+		.container
+			include main_menu.jade
+
+	// ==========================
+	// slider 
+	// ==========================
+	.slider
+		.scroll
+			img(src="img/icons/main_scroll.png")
+		.prev.slide_nav(data-action="previous")
+		.next.slide_nav(data-action="next")
+		.slides#main_slider
+			+slide-1
+			+slide-2

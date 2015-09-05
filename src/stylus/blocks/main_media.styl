@@ -1,0 +1,54 @@
+.media
+	
+	.media_item
+		margin 16px
+		box-shadow 0px 5px 12px rgba(0,0,0,.05)
+		
+		.image
+			margin 0
+			padding 0
+			width 100%
+			// height 200px
+			overflow hidden
+			reset-inline()
+			
+			// sm =
+			// 	height 320px
+			// mid =
+			// 	height 180px
+			// nor =
+			// 	height 200px
+			// big =
+			// 	height 220px
+			// adapt(sm,mid,nor,big);
+
+			> img
+				width 100%
+		
+		a
+			{boblic}
+			display block
+			width 100%
+			height 48px
+			font-size 18px
+			text-transform uppercase
+			padding 0
+			padding-left 8px
+			line-height 48px
+			border 1px solid #eee
+			border-top none
+			color main_blue
+			transition all .3s ease
+			
+			&:hover
+				color #fff
+				background main_blue
+				border 1px solid main_blue
+				
+	[class^="col-"]
+		opacity 1
+		transition all .2s ease
+		
+		&.hidden
+			position absolute
+			opacity 0

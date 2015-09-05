@@ -1,0 +1,65 @@
+mixin prog_normal
+	.col-md-4.col-sm-4.col-xs-12
+		.program_normal--inner
+			.title Минимум
+			.prog_info
+				.air
+					span Махачкала — Медина
+					span Джидда — Махачкала
+
+				.nights
+					span 3
+					span Ночи
+
+				.walk
+					span 15 мин.
+					span до мечети
+
+				.hotel
+					h3 Гостиница в мекке
+					.stars
+						span.gold
+						span.gold
+						span.gold
+						span.gray
+						span.gray
+					.sleep
+						span 3-6 человек
+
+				.price $ 3100
+			.link
+				a(href="") Подробнее
+
+doctype html
+html(lang='ru')
+	include blocks/general/head.jade
+	
+	body
+		include blocks/general/inner_top.jade
+
+		.inner_content
+			.container
+				.breadcumbs
+					a(href="") Главная
+					|   /  Хадж 2015
+
+				.inner_title
+					h1 Программы Хадж 2015
+
+				.row
+					+prog_normal
+					+prog_normal
+					+prog_normal
+					+prog_normal
+					+prog_normal
+					+prog_normal
+					+prog_normal
+
+				include blocks/general/paginator.jade
+				
+		.page_heading-center
+			h1 Контакты
+
+		include blocks/index/main_map.jade
+		include blocks/general/footer.jade			
+		include blocks/general/scripts.jade

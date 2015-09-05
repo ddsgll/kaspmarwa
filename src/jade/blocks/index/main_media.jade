@@ -1,0 +1,46 @@
+mixin media_photo
+	.col-md-4.col-sm-6.col-xs-12(data-type="photo")
+		.media_item
+			.image
+				img(src="img/photos/article.jpg")
+			a(href="") Хадж 2014 года
+
+mixin media_video
+	.col-md-4.col-sm-6.col-xs-12(data-type="video")
+		.media_item
+			.image
+				<iframe width="100%" height="240px" src="https://www.youtube.com/embed/G6oExFXCKxU" frameborder="0" allowfullscreen></iframe>
+			a(href="") Хадж 2014 года
+
+mixin media_audio
+	.col-md-4.col-sm-6.col-xs-12(data-type="audio")
+		.media_item
+			.image
+				<iframe style="border: 0; width: 100%; height: 160px;" src="http://bandcamp.com/EmbeddedPlayer/album=2263614154/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://musique.coeurdepirate.com/album/roses">Roses by Cœur de pirate</a></iframe>
+			a(href="") Хадж 2014 года
+
+
+// ==========================
+// Media section
+// ==========================
+.page_heading-center
+	h1 Медиа
+
+.tabs#media_tab
+	h2(data-type="all") Все
+	h2(data-type="photo") Фото
+	h2(data-type="video") Видео
+	h2(data-type="audio") Аудио
+
+.media
+	.container
+		.row
+			+media_photo
+			+media_video
+			+media_photo
+			+media_video
+			+media_photo
+			+media_audio
+			+media_audio
+			+media_photo
+			+media_photo

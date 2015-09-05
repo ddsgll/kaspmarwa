@@ -1,0 +1,229 @@
+.slider_block
+	width 100%
+	height 720px
+	position relative
+
+.slider
+	top -48px
+	left 0
+	
+	width 100%
+	height 100%
+	
+	background red
+	
+	.prev,
+	.next
+		position absolute
+		bottom 15%
+		left 0
+		width 111px
+		height 196px
+		background url('../img/slider_bg_left.png') no-repeat center
+		background-size auto 100%
+		background-size cover
+		cursor pointer
+		z-index 300
+		transition all .3s ease
+		
+		sm =
+			display none
+		nor =
+			width 90px
+			height 160px
+		big =
+			width 111px
+			height 196px
+		adapt(sm,sm,nor,big)
+				
+		
+		&::before
+			{after}
+			top 72px
+			left 40px
+			width 23px
+			height 46px
+			background url('../img/icons/slider_left.png') no-repeat center
+			transition all .3s ease
+			
+			nor =
+				top 57px
+				left 35px
+			big =
+				top 72px
+				left 40px
+			adapt(,,nor,big)
+			
+		&:hover::before
+			left 30px
+		
+	.next
+		left auto
+		right 0
+		background url('../img/slider_bg_right.png') no-repeat center
+		background-size auto 100%
+		background-size cover
+		
+		sm =
+			display none
+		nor =
+			width 91px
+			height 160px
+		big =
+			width 111px
+			height 196px
+		adapt(sm,sm,nor,big)
+		
+		&::before
+			top 72px
+			left auto
+			right 40px
+			background url('../img/icons/slider_right.png') no-repeat center
+			
+			nor =
+				top 57px
+				right 35px
+			big =
+				top 72px
+				right 40px
+			adapt(,,nor,big)
+		
+		&:hover::before
+			left auto
+			right 30px
+			
+	.scroll
+		position absolute
+		bottom 0
+		left 50%
+		margin-left -80px
+		width 180px
+		height 100px
+		border-radius 1000px 1000px 0 0
+		text-align center
+		line-height 100px
+		cursor pointer
+		z-index 300
+		gradient(to top, main_blue_semitrans, transparent)
+		
+		sm =
+			display none
+		adapt(sm,sm)
+
+		img
+			max-width 30%
+			top 24px
+			transition all .4s ease
+			
+		&:hover
+			img
+				top 32px
+			
+	.slides
+		width 100%
+		height 100%
+		
+		.item
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			background limegreen
+			text-align center
+			padding-top 64px
+			// flex-centrify()
+			flex-direction column
+			
+			for i in (1..10)
+				&:nth-child({i})
+					background url('../img/slides/slide-' + i + '.jpg') no-repeat center
+					background-size 100%
+					background-size cover
+					
+					@media screen and (max-width 480px)
+						background url('../img/slides/slide-' + i + '-min.jpg') no-repeat center
+						background-size 100%
+						background-size cover
+					
+					
+			.desc
+				width auto
+				height auto
+					
+			.title
+				{boblic}
+				text-transform uppercase
+				color #fff
+				width 60%
+				margin 0 auto
+				line-height 1.2
+				transform-origin 50% 0%
+				transform perspective(1200) rotateX(-90deg) translateY(-64px)
+				opacity 0
+				font-size 36px
+				transition all .6s .4s ease
+				
+				sm =
+					font-size 24px
+					width 95%
+				mid =
+					font-size 48px
+				nor =
+					font-size 52px
+				big =
+					font-size 72px
+				adapt(sm,mid,nor,big)
+				
+				@media screen and (max-width 480px)
+					font-size 32px
+				
+			.date
+				{boblic}
+				font-size 30px
+				color #fff
+				opacity 0
+				bottom -32px
+				transition .6s .7s ease
+				
+				sm =
+					font-size 20px
+				adapt(sm)
+				
+			.button
+				{clean}
+				display inline-block
+				text-align center
+				background gold
+				border-radius 12px
+				text-transform uppercase
+				color #fff
+				cursor pointer
+				margin 24px auto
+				transition all .4s ease
+				
+				&:hover
+					background #fff
+					color gold
+					box-shadow 0px 0px 10px gold
+					// background darken(gold, 30%)
+				
+				sm =
+					padding 10px 32px
+					font-size 16px 
+				mid =
+					padding 10px 32px
+					font-size 18px
+				big =
+					padding 24px 72px
+					font-size 30px
+				adapt(sm,mid,mid,big)
+				
+			&.is-selected
+				.title
+					transform perspective(1200) rotateX(0deg) translateY(0px)
+					opacity 1
+					
+				.date
+					opacity 1
+					bottom 0
