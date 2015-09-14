@@ -32,6 +32,20 @@ $(document).ready(function() {
             $("#main_slider").flickity(act);
         });
 
+        var slides = $(".slides .item");
+
+        slides.each(function() {
+
+        	var imgSrc = $(this).find(".slide-image img").attr("src");
+			$(this).find(".slide-image").html("");
+
+        	$(this).css({
+        		"background": "transparent url('" + imgSrc + "') no-repeat center",
+        		"background-size":"cover"
+        	});
+
+        });
+
 
 
     // Programs slider

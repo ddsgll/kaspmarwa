@@ -5,8 +5,8 @@
     "Diode-Bot | <diode-bot@bk.ru>"
   ],
   "dependencies": {
-    "jquery": "~2.1.3",
-    "flickity": "~1.0.0"
+    "flickity": "~1.0.0",
+    "jquery": "~2.1.3"
   },
   "description": "Frontend",
   "license": "MIT"
