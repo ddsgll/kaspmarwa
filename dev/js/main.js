@@ -175,6 +175,65 @@ $(document).ready(function() {
 
 
 
+
+    // Фотогалерея
+        if ( $("#photolist").length ) {
+            var pckry = new Packery( '#photolist', {
+                itemSelector: '.photo',
+                gutter: 4
+            });
+
+            var images = $("#photolist").find("img");
+            var imagescopy = images.clone();
+
+            $(".photoview").html(imagescopy);
+            
+            $(".photoview").flickity({
+                cellSelector: 'img',
+                pageDots: false,
+                prevNextButtons: true,
+                wrapAround: true,
+                setGallerySize: false,
+                resize: false,
+                contain: true
+            });
+
+            var sliderimages = $(".photoview").find("img");
+
+            $(".photo").on('click', function() {
+                var imgindex = $(this).index();
+
+                $(".photosplash").height("100%");
+
+                sliderimages.each(function() {
+                    v_mid( $(this).parent(), $(this) );
+                });
+
+                $(".photoview").flickity('select', imgindex);
+                
+            });
+
+            $(".photosplash .close").on('click', function() {
+                $(".photosplash").height(0);
+            });
+
+            $(".photo").each(function () {
+                if ($(this).offset().top > $(window).scrollTop() && $(this).offset().top < $(window).height()) {
+                    $(this).addClass("visible");
+                }
+            });
+
+            $(window).scroll(function () {
+                $(".photo").each(function () {
+                    if ($(this).offset().top + $(this).height() < $(window).scrollTop() + $(window).height()) {
+                        $(this).addClass("visible");
+                    }
+                });
+            });
+        }
+
+
+
     // Медиа вкладки
         m_tabs = $("#media_tab h2");
 

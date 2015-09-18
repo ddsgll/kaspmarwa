@@ -1,0 +1,63 @@
+mixin photoitem-1
+	.photo
+		img(src="img/photos/gallery-1.jpg")
+
+mixin photoitem-2
+	.photo
+		img(src="img/photos/gallery-2.jpg")
+
+mixin photoitem-3
+	.photo
+		img(src="img/photos/gallery-4.jpg")
+
+mixin photoitem-4
+	.photo
+		img(src="img/photos/gallery-3.jpg")
+
+doctype html
+html(lang='ru')
+	include blocks/general/head.jade
+	
+	body
+		include blocks/general/inner_top.jade
+
+		.photosplash
+			.close
+			.container
+				.photoview
+
+		.inner_content
+			.container
+				.breadcumbs
+					a(href="") Главная
+					|   /  
+					a(href="") Медиа
+					|   /  Фотогалерея
+
+				.inner_title
+					h1 Фотогалерея
+
+				.photogallery#photolist
+					+photoitem-1
+					+photoitem-2
+					+photoitem-3
+					+photoitem-4
+					+photoitem-1
+					+photoitem-2
+					+photoitem-3
+					+photoitem-4
+					+photoitem-1
+					+photoitem-2
+					+photoitem-3
+					+photoitem-4
+					+photoitem-1
+					+photoitem-2
+					+photoitem-3
+					+photoitem-4
+				
+		.page_heading-center
+			h1 Контакты
+
+		include blocks/index/main_map.jade
+		include blocks/general/footer.jade			
+		include blocks/general/scripts.jade

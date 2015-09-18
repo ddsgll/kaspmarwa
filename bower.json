@@ -5,6 +5,9 @@
     "Diode-Bot | <diode-bot@bk.ru>"
   ],
   "dependencies": {
+    "angular": "~1.4.5",
+    "backbone": "~1.2.3",
+    "bootstrap": "~3.3.5",
     "flickity": "~1.0.0",
     "jquery": "~2.1.3"
   },
